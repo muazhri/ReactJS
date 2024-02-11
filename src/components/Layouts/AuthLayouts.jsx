@@ -17,6 +17,7 @@ const AuthLayout = (props) => {
 };
 
 
+// eslint-disable-next-line react/prop-types
 const Navigation = ({type}) => {
   if (type === 'login') {
     return (

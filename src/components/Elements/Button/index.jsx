@@ -1,10 +1,14 @@
-const Button = (props)  => {
-    const {children, classname} = props;
-    return (
-      <button className={`h-10 font-semibold rounded-md ${classname} text-white`} type="submit">
-        {children}
-      </button>
-    );
-  };
+const Button = (props) => {
+  const { children, classname, onClick = () => {}, type = "button" } = props;
+  return (
+    <button
+      className={`h-10 font-semibold rounded-md ${classname} text-white`}
+      type={type}
+      onClick={() => onClick()}
+    >
+      {children}
+    </button>
+  );
+};
 
-  export default Button;
+export default Button;
